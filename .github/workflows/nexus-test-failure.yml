@@ -1,0 +1,16 @@
+
+name: NEXUS AI Test Failure
+
+on:
+  workflow_dispatch:
+
+jobs:
+  simulate-failure:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Simulate application error
+        run: |
+          echo "NEXUS AI test started"
+          echo "Simulating dependency failure"
+          exit 1
